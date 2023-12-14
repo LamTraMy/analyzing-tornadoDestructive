@@ -1,0 +1,79 @@
+﻿--Câu 1. Tổng số lượng lốc xoáy theo từng tháng của mỗi năm
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, NON EMPTY
+{([Dim Date].[Yr].[Yr] * [Dim Date].[Mo].[Mo])} ON ROWS 
+FROM [Store DW];
+
+--Câu 2. Tổng số lượng lốc xoáy theo từng năm
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, NON EMPTY
+{([Dim Date].[Yr].[Yr])} ON ROWS 
+FROM [Store DW];
+
+--Câu 3. Số lần xảy ra lốc xoáy ở từng bang trong năm 2020
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, NON EMPTY
+{([Dim Date].[Yr].[Yr] *[Dim Location].[St].[St] )} ON ROWS 
+FROM (SELECT ({[Dim Date].[Yr].&[2020]}) ON COLUMNS
+FROM [Store DW]);
+
+--Câu 4. Số lần xảy ra lốc xoáy ở từng bang theo từng tháng trong năm 2020
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, NON EMPTY
+{([Dim Date].[Yr].[Yr] *[Dim Date].[Mo].[Mo]*[Dim Location].[St].[St] )} ON ROWS 
+FROM (SELECT ({[Dim Date].[Yr].&[2020]}) ON COLUMNS
+FROM [Store DW]);
+
+--Câu 5. Tìm top 3 bang có tổng số người tử vong cao nhất năm 1953
+SELECT NON EMPTY {[Measures].[SoLuongNguoiTuVong]} ON COLUMNS, NON EMPTY
+{ TOPCOUNT ([Dim Location].[St].[St], 3, [Measures].[SoLuongNguoiTuVong])} ON ROWS
+FROM (SELECT ({[Dim Date].[Yr].&[1953]}) ON COLUMNS
+FROM [Store DW]);
+
+-- Câu 6. Tìm các bang với số lượng lốc xoáy tại bang đó có mức độ sức tàn phá từ "Nghiêm trọng" trở lên
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS,
+NON EMPTY {([Dim Location].[St].[St] * [Dim Size].[Mag].[Mag])} ON ROWS
+FROM (SELECT ({[Dim Size].[Mag].[Mag].&[3],[Dim Size].[Mag].[Mag].&[4],[Dim Size].[Mag].[Mag].&[5]}) ON COLUMNS
+FROM [Store DW]);
+
+-- Câu 7. Tìm các năm có các cơn lốc xoáy có độ đo F/EF cao nhất và gây tử vong
+SELECT NON EMPTY {[Measures].[SoLuongNguoiTuVong]} ON COLUMNS, 
+NON EMPTY {([Dim Date].[Yr].[Yr]) * [Dim Size].[Mag].[Mag]} ON ROWS
+FROM (SELECT (FILTER([Dim Date].[Yr].[Yr], [Measures].[SoLuongNguoiTuVong] >0)) ON COLUMNS
+FROM (SELECT ({[Dim Size].[Mag].[Mag].&[5]}) ON COLUMNS
+FROM [Store DW]));
+
+-- Câu 8. Số người bị thương do các cơn lốc xoáy có độ đo F/EF ở mức độ nhẹ đến trung bình
+SELECT NON EMPTY {[Measures].[SoLuongNguoiBiThuong]} ON COLUMNS,
+NON EMPTY {([Dim Size].[Mag].[Mag])} ON ROWS
+FROM (SELECT ({[Dim Size].[Mag].[Mag].&[0], [Dim Size].[Mag].[Mag].&[1]}) ON COLUMNS
+FROM [Store DW]);
+
+-- Câu 9. Trung bình 1 ngày có bao nhiêu người chết và bị thương ở bang MA
+SELECT
+NON EMPTY {([Measures].[AvgNguoiTuVongTrong1Ngay]), [Measures].[AvgNguoiBiThuongTrong1Ngay]} ON COLUMNS,
+NON EMPTY {[Dim Location].[St].[MA]} ON ROWS
+FROM [Store DW];
+
+--Câu 10. Tìm các bang có các cơn lốc xoáy gây thương tích nhưng không gây tử vong trong năm 2001
+SELECT NON EMPTY { [Measures].[SoLuongNguoiBiThuong] } ON COLUMNS, NON EMPTY 
+{ ([Dim Date].[Yr].[Yr] * [Dim Location].[St].[St] ) } ON ROWS 
+FROM ( SELECT ( FILTER( [Dim Location].[St].[St], [Measures].[SoLuongNguoiBiThuong] > 0 and [Measures].[SoLuongNguoiTuVong]=0)) 
+ON COLUMNS FROM ( SELECT ( { [Dim Date].[Yr].&[2001] } ) ON COLUMNS 
+FROM [Store DW]));
+
+--Câu 11. Tên các tiểu bang có số lượng người bị thương > 5500 người
+SELECT NON EMPTY ( [Measures].[SoLuongNguoiBiThuong] ) ON COLUMNS, 
+FILTER( [Dim Location].[St].[St],  [Measures].[SoLuongNguoiBiThuong] > 5500 ) ON ROWS 
+FROM [Store DW];
+
+--Câu 12. Thống kê số lượng lốc xoáy theo từng tháng và từng loại độ đo F/EF
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, 
+NON EMPTY {([Dim Date].[Mo].[Mo], [Dim Size].[Mag].[Mag])} ON ROWS
+FROM [Store DW];
+
+--Câu 13. Thống kê top 5 bang xảy ra lốc xoáy ít nhất
+SELECT NON EMPTY {[Measures].[Id Distinct Count]} ON COLUMNS, NON EMPTY
+BOTTOMCOUNT ([Dim Location].[St].[St], 5,[Measures].[Id Distinct Count])ON ROWS
+FROM [Store DW];
+
+--Câu 14. Thống kê tổng số người tử vong theo từng năm và từng bang
+SELECT NON EMPTY {[Measures].[SoLuongNguoiTuVong]} ON COLUMNS, 
+NON EMPTY {([Dim Date].[Yr].[Yr], [Dim Location].[St].[St])} ON ROWS
+FROM [Store DW];

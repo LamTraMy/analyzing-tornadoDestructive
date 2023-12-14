@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-N26UF3C.StoreDataWareHouse"
+  DTS:DTSID="{C404B1B7-4CFB-45E4-BF2B-AF90EB02E471}"
+  DTS:CreationName="ADO">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-N26UF3C;Initial Catalog=StoreDataWareHouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-SSIS_Us_Tornado-{C404B1B7-4CFB-45E4-BF2B-AF90EB02E471}DESKTOP-N26UF3C.StoreDataWareHouse;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

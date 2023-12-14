@@ -1,0 +1,131 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2b0e42ea-1c84-4c99-bba0-8885d4e52fd8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>StoreDataWareHouse</ID>
+  <Name>StoreDataWareHouse</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>StoreDataWareHouse</DataSourceID>
+  <Schema>
+    <xs:schema id="StoreDataWareHouse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="StoreDataWareHouse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="8b13a7bf-5d4d-4adf-8322-a82224e654ce">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Fact_Tornado" msprop:DbTableName="Fact_Tornado" msprop:FriendlyName="Fact_Tornado" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="05b1c518-8b4d-4b66-84fb-44783c40ca6f">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="id" msprop:DbColumnName="id" msprop:design-time-name="916dbdb9-d950-4671-b4dd-29ef10847a5c" type="xs:int" />
+                  <xs:element name="date_id" msprop:FriendlyName="date_id" msprop:DbColumnName="date_id" msprop:design-time-name="fec17e5e-e35f-480e-9896-59f4755dcf06" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="inj" msprop:FriendlyName="inj" msprop:DbColumnName="inj" msprop:design-time-name="a666c3e7-9374-4c14-96b1-3d871b4e7896" type="xs:int" minOccurs="0" />
+                  <xs:element name="fat" msprop:FriendlyName="fat" msprop:DbColumnName="fat" msprop:design-time-name="ebe5d3e6-78d8-44b7-8c28-6997ac57cc07" type="xs:int" minOccurs="0" />
+                  <xs:element name="location_id" msprop:FriendlyName="location_id" msprop:DbColumnName="location_id" msprop:design-time-name="0f38bf1f-3e86-4b8f-8875-ca6082b6cfac" type="xs:int" minOccurs="0" />
+                  <xs:element name="size_id" msprop:FriendlyName="size_id" msprop:DbColumnName="size_id" msprop:design-time-name="0648c5a8-6e82-4d0b-9eaf-4ad0f4a20ffa" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Location" msprop:DbTableName="Dim_Location" msprop:FriendlyName="Dim_Location" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="e9bcbf82-ae69-4d53-8900-6f9e83e079ec">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="location_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="location_id" msprop:DbColumnName="location_id" msprop:design-time-name="a60efded-1aac-45db-a1a8-c3e0aafdd761" type="xs:int" />
+                  <xs:element name="st" msprop:FriendlyName="st" msprop:DbColumnName="st" msprop:design-time-name="13a40c28-8518-4921-ad69-af0ff079943e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="slat" msprop:FriendlyName="slat" msprop:DbColumnName="slat" msprop:design-time-name="e020894f-b9a7-465a-9045-76c0d31a4967" type="xs:double" minOccurs="0" />
+                  <xs:element name="slon" msprop:FriendlyName="slon" msprop:DbColumnName="slon" msprop:design-time-name="31400a8e-a629-4bbe-aa93-ea9544f0aee1" type="xs:double" minOccurs="0" />
+                  <xs:element name="elat" msprop:FriendlyName="elat" msprop:DbColumnName="elat" msprop:design-time-name="e6376d09-f586-41ea-9abc-6cfef4f1202f" type="xs:double" minOccurs="0" />
+                  <xs:element name="elon" msprop:FriendlyName="elon" msprop:DbColumnName="elon" msprop:design-time-name="6801e52a-180b-4be5-bd25-83afd82ea342" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Size" msprop:DbTableName="Dim_Size" msprop:FriendlyName="Dim_Size" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="2146ece0-7cef-45ab-9427-f9f3773b7752">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="size_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="size_id" msprop:DbColumnName="size_id" msprop:design-time-name="b1a06ebf-ccd9-4c7d-92a8-a58679bc74ae" type="xs:int" />
+                  <xs:element name="mag" msprop:FriendlyName="mag" msprop:DbColumnName="mag" msprop:design-time-name="ebad66b2-9f92-456e-a148-eb3a33501b17" type="xs:int" minOccurs="0" />
+                  <xs:element name="len" msprop:FriendlyName="len" msprop:DbColumnName="len" msprop:design-time-name="8e16b855-670a-48e9-8813-d63719239016" type="xs:double" minOccurs="0" />
+                  <xs:element name="wid" msprop:FriendlyName="wid" msprop:DbColumnName="wid" msprop:design-time-name="f8d3f9be-4df8-44c7-8432-36ef37ae38a9" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Date" msprop:DbTableName="Dim_Date" msprop:FriendlyName="Dim_Date" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f9a16140-0870-4ec8-8d70-da9b2dbb7fcc">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="yr" msprop:FriendlyName="yr" msprop:DbColumnName="yr" msprop:design-time-name="3b798990-5949-4418-91a5-4b2198ae8da5" type="xs:int" minOccurs="0" />
+                  <xs:element name="mo" msprop:FriendlyName="mo" msprop:DbColumnName="mo" msprop:design-time-name="3ff935da-0721-4bdf-b9dc-ca0a3cf93653" type="xs:int" minOccurs="0" />
+                  <xs:element name="dy" msprop:FriendlyName="dy" msprop:DbColumnName="dy" msprop:design-time-name="40382ad3-72ad-4625-b580-fc8e1ee7e80a" type="xs:int" minOccurs="0" />
+                  <xs:element name="date_id" msprop:FriendlyName="date_id" msprop:DbColumnName="date_id" msprop:design-time-name="c3c0ab76-2d4a-452c-85ff-74ea3cdb05e2" type="xs:dateTime" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Tornado" />
+          <xs:field xpath="id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Location_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Location" />
+          <xs:field xpath="location_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Size_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Size" />
+          <xs:field xpath="size_id" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Date" />
+          <xs:field xpath="date_id" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="Fact_Tornado-Dim_Date" msdata:parent="dbo_Dim_Date" msdata:child="dbo_Fact_Tornado" msdata:parentkey="date_id" msdata:childkey="date_id" />
+          <msdata:Relationship name="Fact_Tornado-Dim_Location" msdata:parent="dbo_Dim_Location" msdata:child="dbo_Fact_Tornado" msdata:parentkey="location_id" msdata:childkey="location_id" />
+          <msdata:Relationship name="Fact_Tornado-Dim_Size" msdata:parent="dbo_Dim_Size" msdata:child="dbo_Fact_Tornado" msdata:parentkey="size_id" msdata:childkey="size_id" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <StoreDataWareHouse xmlns="" />
+  </Schema>
+</DataSourceView>

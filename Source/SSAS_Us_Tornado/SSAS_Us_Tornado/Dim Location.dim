@@ -1,0 +1,289 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e3b1c52e-011d-4daf-9730-4438cde83928" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Location</ID>
+  <Name>Dim Location</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2872" scrolltop="-5345" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8509" y="15388" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Location" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Location" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2872</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5345</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="111">
+            <Shape Id="Location Id" Expanded="false">
+              <Attributes>
+                <Attribute Id="Location Id" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Elon" Expanded="false">
+              <Attributes>
+                <Attribute Id="Elon" />
+              </Attributes>
+              <Position x="163" y="20" />
+            </Shape>
+            <Shape Id="Elat" Expanded="false">
+              <Attributes>
+                <Attribute Id="Elat" />
+              </Attributes>
+              <Position x="163" y="69" />
+            </Shape>
+            <Shape Id="Slon" Expanded="false">
+              <Attributes>
+                <Attribute Id="Slon" />
+              </Attributes>
+              <Position x="163" y="118" />
+            </Shape>
+            <Shape Id="Slat" Expanded="false">
+              <Attributes>
+                <Attribute Id="Slat" />
+              </Attributes>
+              <Position x="163" y="167" />
+            </Shape>
+            <Shape Id="St" Expanded="false">
+              <Attributes>
+                <Attribute Id="St" />
+              </Attributes>
+              <Position x="163" y="216" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6bfe2948-6472-4ea4-bb9e-cd210555d5c6">
+    <DataSourceViewID>StoreDataWareHouse</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="cf0ce524-bb2f-4e1d-89a4-e9a9fc659322">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="bb62baf7-b59b-475e-9181-90241a786e9f">
+      <ID>Location Id</ID>
+      <Name>Location Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d88e691f-ba91-4b06-a537-0ef666bdae3d">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d8c10919-44da-4339-a74e-145438922f34">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>location_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="94bc3fa5-ef42-4572-b75d-af363dd2f6a0">
+          <AttributeID>St</AttributeID>
+          <Name>St</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="11091c3a-16fe-4e31-acc2-0e6c93a53074">
+          <AttributeID>Slat</AttributeID>
+          <Name>Slat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="856f364f-303c-438b-a997-38fb880a9289">
+          <AttributeID>Slon</AttributeID>
+          <Name>Slon</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="22f395c5-1ef4-49eb-8e19-26e4f8f7b817">
+          <AttributeID>Elat</AttributeID>
+          <Name>Elat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ca9fd880-adba-4acb-97d9-19c9b0a23eaf">
+          <AttributeID>Elon</AttributeID>
+          <Name>Elon</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="faf978ea-2e29-45b4-8e01-da8b18473dd8">
+      <ID>St</ID>
+      <Name>St</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f50bcab-9bde-4f67-b4a8-3eac983de90e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cc2e3f6-30bf-4ce2-a4e0-565aa325f221">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>st</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9e9719c1-ae35-4ef5-8dcc-aeff53f5abfe">
+      <ID>Slat</ID>
+      <Name>Slat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4e2419ba-c64c-4a65-9801-0a10e5b698d0">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="62a27778-a8ce-4ffe-abba-64544419f722">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>slat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="543c6e61-4236-42ef-a017-59ead0ea6318">
+      <ID>Slon</ID>
+      <Name>Slon</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="48847484-612e-477b-82dd-a53735f23e80">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59a07399-f763-4b34-b943-dd02db2aea72">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>slon</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7056a69a-96a8-4448-8edd-49296865f472">
+      <ID>Elat</ID>
+      <Name>Elat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="83b7d631-4f1c-49a1-9c29-0f0a95b7614d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f79232c9-2efd-4b48-bff1-6b05030971fb">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>elat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="00c4965e-67c8-4369-978d-66bb09278bcb">
+      <ID>Elon</ID>
+      <Name>Elon</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="25d6e115-87f5-4b72-9148-8853df863335">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9e595592-9c5e-4f9f-80f6-da943fc5d0c4">
+            <TableID>dbo_Dim_Location</TableID>
+            <ColumnID>elon</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="336cd532-f4f3-4cdf-895c-982ee1215e45">
+      <ID>Hierarchy</ID>
+      <Name>State-Longitude</Name>
+      <Levels>
+        <Level dwd:design-time-name="5d9fb13d-7c26-4ae4-bcb7-e5f8070a83d6">
+          <ID>St</ID>
+          <Name>St</Name>
+          <SourceAttributeID>St</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="eb9d03a9-a172-4e4b-9a7d-750e902d81a5">
+          <ID>Slon</ID>
+          <Name>Slon</Name>
+          <SourceAttributeID>Slon</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0af472f0-a68f-4cf0-8ad8-626a995f35cc">
+          <ID>Elon</ID>
+          <Name>Elon</Name>
+          <SourceAttributeID>Elon</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="f886d259-e8a6-4367-aec5-15cf50009eec">
+      <ID>Hierarchy 1</ID>
+      <Name>State-Latitude</Name>
+      <Levels>
+        <Level dwd:design-time-name="518cfbd8-adb6-463f-9340-cab93edd46bf">
+          <ID>St</ID>
+          <Name>St</Name>
+          <SourceAttributeID>St</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="dada83e3-3728-48b4-af90-82b97ffc98ef">
+          <ID>Slat</ID>
+          <Name>Slat</Name>
+          <SourceAttributeID>Slat</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="30814206-4af0-4418-a409-165faa26dea8">
+          <ID>Elat</ID>
+          <Name>Elat</Name>
+          <SourceAttributeID>Elat</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
